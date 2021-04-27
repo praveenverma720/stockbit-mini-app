@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("kotlin-android")
 }
 
@@ -38,22 +38,7 @@ android {
 }
 
 dependencies {
-    implementation(project(Modules.core))
-    implementation(project(Modules.featureLogin))
-    implementation(project(Modules.featureWatchlist))
-
     implementation(Libs.kotlinStdlib)
-    implementation(Libs.coreKtx)
     implementation(Libs.appCompat)
-    implementation(Libs.material)
-    implementation(Libs.constraintLayout)
-    implementation(Libs.navigationFragmentKtx)
-    implementation(Libs.navigationUIKtx)
-    implementation(Libs.lifecycleLiveData)
     implementation(Libs.lifecycleViewModel)
-
-    testImplementation(TestLibs.jUnit)
-
-    androidTestImplementation(TestLibs.jUnitExt)
-    androidTestImplementation(TestLibs.espressoCore)
 }

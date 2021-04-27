@@ -1,2 +1,3 @@
 rootProject.name = "Stockbit Mini App"
-include ':app'
+
+include(":app")

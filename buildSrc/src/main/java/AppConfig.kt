@@ -1,5 +1,4 @@
 object AppConfig {
-
     const val compileSdkVersion = 30
     const val buildToolsVersion = "30.0.3"
     const val applicationId = "com.didik.stockbitminiapp"

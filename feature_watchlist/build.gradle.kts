@@ -8,12 +8,12 @@ android {
     buildToolsVersion(AppConfig.buildToolsVersion)
 
     defaultConfig {
-        applicationId = AppConfig.applicationId
         minSdkVersion(AppConfig.minSdkVersion)
         targetSdkVersion(AppConfig.targetSdkVersion)
         versionCode = AppConfig.versionCode
         versionName = AppConfig.versionName
         testInstrumentationRunner = AppConfig.testInstrumentationRunner
+        consumerProguardFile("consumer-rules.pro")
     }
 
     buildTypes {
@@ -42,7 +42,13 @@ dependencies {
 
     implementation(Libs.kotlinStdlib)
     implementation(Libs.appCompat)
+    implementation(Libs.constraintLayout)
+    implementation(Libs.fragmentKtx)
+    implementation(Libs.recyclerView)
+    implementation(Libs.paging)
+    implementation(Libs.swipeRefreshLayout)
     implementation(Libs.lifecycleViewModel)
     implementation(Libs.lifecycleLiveData)
-    implementation(Libs.lifecycleViewModel)
+    implementation(Libs.moshi)
+    implementation(Libs.retrofit)
 }

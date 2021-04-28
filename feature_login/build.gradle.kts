@@ -8,12 +8,12 @@ android {
     buildToolsVersion(AppConfig.buildToolsVersion)
 
     defaultConfig {
-        applicationId = AppConfig.applicationId
         minSdkVersion(AppConfig.minSdkVersion)
         targetSdkVersion(AppConfig.targetSdkVersion)
         versionCode = AppConfig.versionCode
         versionName = AppConfig.versionName
         testInstrumentationRunner = AppConfig.testInstrumentationRunner
+        consumerProguardFile("consumer-rules.pro")
     }
 
     buildTypes {
@@ -42,5 +42,8 @@ dependencies {
 
     implementation(Libs.kotlinStdlib)
     implementation(Libs.appCompat)
+    implementation(Libs.material)
+    implementation(Libs.navigationUIKtx)
+    implementation(Libs.navigationFragmentKtx)
     implementation(Libs.lifecycleViewModel)
 }

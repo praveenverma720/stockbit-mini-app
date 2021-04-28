@@ -3,23 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_login">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.didik.stockbitminiapp.ui.watchlist.WatchlistFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_watchlist" />
+        android:id="@+id/navigation_login"
+        android:name="com.didik.feature_login.ui.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.didik.stockbitminiapp.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_watchlist"
+        android:name="com.didik.feature_watchlist.ui.WatchlistFragment"
+        android:label="Watchlist"
+        tools:layout="@layout/fragment_watchlist">
+        <deepLink app:uri="stockbit://watchlist" />
+    </fragment>
 
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.didik.stockbitminiapp.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
 </navigation>

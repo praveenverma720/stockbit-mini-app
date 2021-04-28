@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_all_watchlist">All Watchlist</string>
+    <string name="label_add_symbol">Add Symbol</string>
+    <string name="label_tap_to_retry">Tap to Retry</string>
+    <string name="label_open_drawer">Open Drawer</string>
+    <string name="label_open_notification">Open Notification</string>
+</resources>

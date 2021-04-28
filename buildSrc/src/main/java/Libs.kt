@@ -5,8 +5,16 @@ internal object LibsVersion {
     const val appCompat = "1.2.0"
     const val material = "1.3.0"
     const val constraintLayout = "2.0.4"
+    const val recyclerView = "1.1.0"
+    const val swipeRefreshLayout = "1.1.0"
     const val navigation = "2.3.5"
+    const val fragmentKtx = "1.3.3"
+    const val paging = "3.0.0-rc01"
     const val lifecycleKtx = "2.3.1"
+    const val moshi = "1.9.3"
+    const val moshiConverter = "2.9.0"
+    const val retrofit = "2.9.0"
+    const val loggingInterceptor = "4.9.0"
 }
 
 object Libs {
@@ -17,8 +25,16 @@ object Libs {
     const val appCompat = "androidx.appcompat:appcompat:${LibsVersion.appCompat}"
     const val material = "com.google.android.material:material:${LibsVersion.material}"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${LibsVersion.constraintLayout}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${LibsVersion.recyclerView}"
+    const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${LibsVersion.swipeRefreshLayout}"
+    const val fragmentKtx = "androidx.fragment:fragment-ktx:${LibsVersion.fragmentKtx}"
     const val navigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:${LibsVersion.navigation}"
     const val navigationUIKtx = "androidx.navigation:navigation-ui-ktx:${LibsVersion.navigation}"
+    const val paging = "androidx.paging:paging-runtime-ktx:${LibsVersion.paging}"
     const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${LibsVersion.lifecycleKtx}"
     const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${LibsVersion.lifecycleKtx}"
+    const val moshi = "com.squareup.moshi:moshi-kotlin:${LibsVersion.moshi}"
+    const val moshiConverter = "com.squareup.retrofit2:converter-moshi:${LibsVersion.moshiConverter}"
+    const val retrofit = "com.squareup.retrofit2:retrofit:${LibsVersion.retrofit}"
+    const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${LibsVersion.loggingInterceptor}"
 }

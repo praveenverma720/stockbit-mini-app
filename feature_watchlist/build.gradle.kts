@@ -51,4 +51,8 @@ dependencies {
     implementation(Libs.lifecycleLiveData)
     implementation(Libs.moshi)
     implementation(Libs.retrofit)
+    implementation(Libs.koinScope)
+    implementation(Libs.koinFragment)
+    implementation(Libs.koinViewModel)
+    implementation(Libs.koinExt)
 }

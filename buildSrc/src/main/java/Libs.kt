@@ -15,6 +15,7 @@ internal object LibsVersion {
     const val moshiConverter = "2.9.0"
     const val retrofit = "2.9.0"
     const val loggingInterceptor = "4.9.0"
+    const val koin = "2.2.2"
 }
 
 object Libs {
@@ -37,4 +38,9 @@ object Libs {
     const val moshiConverter = "com.squareup.retrofit2:converter-moshi:${LibsVersion.moshiConverter}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${LibsVersion.retrofit}"
     const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${LibsVersion.loggingInterceptor}"
+
+    const val koinScope = "org.koin:koin-androidx-scope:${LibsVersion.koin}"
+    const val koinViewModel = "org.koin:koin-androidx-viewmodel:${LibsVersion.koin}"
+    const val koinFragment = "org.koin:koin-androidx-fragment:${LibsVersion.koin}"
+    const val koinExt = "org.koin:koin-androidx-ext:${LibsVersion.koin}"
 }

@@ -51,6 +51,10 @@ dependencies {
     implementation(Libs.navigationUIKtx)
     implementation(Libs.lifecycleLiveData)
     implementation(Libs.lifecycleViewModel)
+    implementation(Libs.koinScope)
+    implementation(Libs.koinFragment)
+    implementation(Libs.koinViewModel)
+    implementation(Libs.koinExt)
 
     testImplementation(TestLibs.jUnit)
 

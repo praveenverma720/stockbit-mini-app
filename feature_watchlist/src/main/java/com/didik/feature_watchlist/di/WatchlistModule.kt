@@ -9,12 +9,17 @@ import com.didik.feature_watchlist.data.remote.routes.StockServices
 import com.didik.feature_watchlist.data.repository.StockRepository
 import com.didik.feature_watchlist.domain.repository.IStockRepository
 import com.didik.feature_watchlist.domain.usecase.StockUseCase
+import com.didik.feature_watchlist.ui.WatchlistViewModel
+import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.dsl.module
 
-class WatchlistModule {
+object WatchlistModule {
 
-    private fun provideStockServices(): StockServices = Network
-        .builder()
-        .create(StockServices::class.java)
+    private fun provideStockServices(): StockServices {
+        return Network
+            .builder()
+            .create(StockServices::class.java)
+    }
 
     private fun provideStockRemoteDataSource(services: StockServices): StockRemoteDataSource {
         return StockRemoteDataSource(services)
@@ -32,16 +37,15 @@ class WatchlistModule {
     private fun provideStockUseCase(
         repository: IStockRepository,
         dispatcher: DispatcherProvider
-    ): StockUseCase {
-        return StockUseCase(repository, dispatcher)
-    }
+    ): StockUseCase = StockUseCase(repository, dispatcher)
 
-    fun buildUseCase(): StockUseCase {
-        val remoteDataSource = provideStockRemoteDataSource(provideStockServices())
-        val repository = provideStockRepository(
-            remoteDataSource,
-            provideCryptoMapper()
-        )
-        return provideStockUseCase(repository, provideAppDispatcher())
+    val module = module {
+        single { provideStockServices() }
+        single { provideStockRemoteDataSource(get()) }
+        single { provideCryptoMapper() }
+        single { provideStockRepository(get(), get()) }
+        single { provideAppDispatcher() }
+        single { provideStockUseCase(get(), get()) }
+        viewModel { WatchlistViewModel(get()) }
     }
 }

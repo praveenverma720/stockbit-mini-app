@@ -3,7 +3,6 @@ package com.didik.feature_watchlist.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -12,11 +11,12 @@ import com.didik.feature_watchlist.R
 import com.didik.feature_watchlist.databinding.FragmentWatchlistBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class WatchlistFragment : BindingFragment<FragmentWatchlistBinding>() {
 
     private lateinit var cryptoAdapter: CryptoAdapter
-    private val viewModel: WatchlistViewModel by activityViewModels()
+    private val viewModel: WatchlistViewModel by viewModel()
 
     override fun inflateBinding(
         inflater: LayoutInflater,

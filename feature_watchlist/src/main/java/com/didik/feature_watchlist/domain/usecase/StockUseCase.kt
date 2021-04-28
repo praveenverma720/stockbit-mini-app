@@ -19,8 +19,8 @@ class StockUseCase constructor(
             withContext(dispatcher.io) {
                 repository.getTopCrypto(page, limit)
             }
-        } catch (exceptions: Exception) {
-            Result.Failure(Throwable(exceptions.message))
+        } catch (exception: Exception) {
+            Result.Failure(Throwable(exception.message))
         }
     }
 }

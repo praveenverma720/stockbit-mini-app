@@ -15,7 +15,6 @@ android {
         testInstrumentationRunner = AppConfig.testInstrumentationRunner
         consumerProguardFile("consumer-rules.pro")
     }
-
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -45,5 +44,4 @@ dependencies {
     implementation(Libs.material)
     implementation(Libs.navigationUIKtx)
     implementation(Libs.navigationFragmentKtx)
-    implementation(Libs.lifecycleViewModel)
 }

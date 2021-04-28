@@ -15,7 +15,6 @@ android {
         testInstrumentationRunner = AppConfig.testInstrumentationRunner
         consumerProguardFile("consumer-rules.pro")
     }
-
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -25,20 +24,16 @@ android {
             )
         }
     }
-
     buildTypes.forEach { buildType ->
         buildType.buildConfigField("String", "API_BASE_URL", "\"https://min-api.cryptocompare.com/\"")
     }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-
     kotlinOptions {
         jvmTarget = AppConfig.jvmTarget
     }
-
     buildFeatures {
         viewBinding = true
     }
@@ -52,6 +47,4 @@ dependencies {
     implementation(Libs.moshiConverter)
     implementation(Libs.retrofit)
     implementation(Libs.loggingInterceptor)
-    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
-    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
 }

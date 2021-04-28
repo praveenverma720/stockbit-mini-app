@@ -15,7 +15,6 @@ android {
         versionName = AppConfig.versionName
         testInstrumentationRunner = AppConfig.testInstrumentationRunner
     }
-
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false

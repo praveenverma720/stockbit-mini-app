@@ -20,8 +20,6 @@ class CryptoMapper {
     }
 
     fun mapToListDomain(response: List<CryptoDataResponse>): List<CryptoModel> {
-        return response.map { cryptoData ->
-            mapToDomain(cryptoData)
-        }
+        return response.map(::mapToDomain)
     }
 }

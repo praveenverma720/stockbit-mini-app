@@ -15,7 +15,6 @@ android {
         testInstrumentationRunner = AppConfig.testInstrumentationRunner
         consumerProguardFile("consumer-rules.pro")
     }
-
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -42,6 +41,7 @@ dependencies {
 
     implementation(Libs.kotlinStdlib)
     implementation(Libs.appCompat)
+    implementation(Libs.material)
     implementation(Libs.constraintLayout)
     implementation(Libs.fragmentKtx)
     implementation(Libs.recyclerView)
@@ -55,4 +55,9 @@ dependencies {
     implementation(Libs.koinFragment)
     implementation(Libs.koinViewModel)
     implementation(Libs.koinExt)
+
+    testImplementation(TestLibs.mockk)
+    testImplementation(TestLibs.kotestRunner)
+    testImplementation(TestLibs.kotestAssertions)
+    testImplementation(TestLibs.kotestProperty)
 }

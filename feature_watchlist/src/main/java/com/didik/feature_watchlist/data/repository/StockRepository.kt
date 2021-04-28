@@ -12,17 +12,14 @@ class StockRepository constructor(
 ) : IStockRepository {
 
     override suspend fun getTopCrypto(page: Int, limit: Int): Result<List<CryptoModel>> {
-        return try {
-            val response = remoteDataSource.getTopCrypto(page, limit)
-            if (response.isSuccessful) {
-                val data = response.body()?.data.orEmpty()
-                val cryptoList = mapper.mapToListDomain(data)
-                Result.Success(cryptoList)
-            } else {
-                Result.Failure(Throwable(response.message()))
-            }
-        } catch (exception: Exception) {
-            Result.Failure(Throwable(exception.message.orEmpty()))
+        val response = remoteDataSource.getTopCrypto(page, limit)
+
+        return if (response.isSuccessful) {
+            val data = response.body()?.data.orEmpty()
+            val cryptoList = mapper.mapToListDomain(data)
+            Result.Success(cryptoList)
+        } else {
+            Result.Failure(Throwable(response.message()))
         }
     }
 }

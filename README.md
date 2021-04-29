@@ -28,3 +28,7 @@ A small clone application from [Stockbit Apps](https://stockbit.com) which has a
 Because by default to run unit testing using Android JUnit, to be able to run unit testing using Kotest you need to install the Kotest plugin first in Android Studio.
 
 [Kotest Plugin](https://plugins.jetbrains.com/plugin/14080-kotest)
+
+### Unit Test Result
+<img src="https://github.com/didik-maulana/stockbit-mini-app/blob/main/screenshots/unit-test.png" />
+

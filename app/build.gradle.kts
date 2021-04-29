@@ -42,17 +42,10 @@ dependencies {
     implementation(project(Modules.featureWatchlist))
 
     implementation(Libs.kotlinStdlib)
-    implementation(Libs.coreKtx)
     implementation(Libs.appCompat)
-    implementation(Libs.material)
     implementation(Libs.constraintLayout)
     implementation(Libs.navigationFragmentKtx)
     implementation(Libs.navigationUIKtx)
-    implementation(Libs.lifecycleLiveData)
-    implementation(Libs.lifecycleViewModel)
-    implementation(Libs.koinScope)
-    implementation(Libs.koinFragment)
-    implementation(Libs.koinViewModel)
     implementation(Libs.koinExt)
 
     testImplementation(TestLibs.jUnit)

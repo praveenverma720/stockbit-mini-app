@@ -47,9 +47,4 @@ dependencies {
     implementation(Libs.navigationFragmentKtx)
     implementation(Libs.navigationUIKtx)
     implementation(Libs.koinExt)
-
-    testImplementation(TestLibs.jUnit)
-
-    androidTestImplementation(TestLibs.jUnitExt)
-    androidTestImplementation(TestLibs.espressoCore)
 }

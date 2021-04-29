@@ -17,7 +17,7 @@ A small clone application from [Stockbit Apps](https://stockbit.com) which has a
 - Modularization of Android Application.
 - MVVM and Clean Architecture.
 - Material Design.
-- Paging3
+- Paging3.
 - Koin.
 - Coroutine and Flow.
 - MockK and Kotest for Unit Testing.

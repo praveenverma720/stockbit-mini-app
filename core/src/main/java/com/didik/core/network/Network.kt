@@ -13,19 +13,10 @@ object Network {
 
     private const val BASE_URL = BuildConfig.API_BASE_URL
 
-    fun builder(baseUrl: String = BASE_URL): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl(baseUrl)
-            .addConverterFactory(createMoshiConverterFactory())
-            .client(okHttpClient())
-            .build()
-    }
-
-    private fun createMoshiConverterFactory(): MoshiConverterFactory {
-        val moshi = Moshi.Builder()
-            .add(KotlinJsonAdapterFactory())
-            .build()
-        return MoshiConverterFactory.create(moshi)
+    private fun createLoggingInterceptor(): HttpLoggingInterceptor {
+        return HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        }
     }
 
     private fun okHttpClient(): OkHttpClient {
@@ -41,10 +32,18 @@ object Network {
         return okHttpBuilder.build()
     }
 
+    private fun createMoshiConverterFactory(): MoshiConverterFactory {
+        val moshi = Moshi.Builder()
+            .add(KotlinJsonAdapterFactory())
+            .build()
+        return MoshiConverterFactory.create(moshi)
+    }
 
-    private fun createLoggingInterceptor(): HttpLoggingInterceptor {
-        return HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BODY
-        }
+    fun builder(baseUrl: String = BASE_URL): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(baseUrl)
+            .addConverterFactory(createMoshiConverterFactory())
+            .client(okHttpClient())
+            .build()
     }
 }

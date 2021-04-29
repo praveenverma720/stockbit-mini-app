@@ -25,7 +25,11 @@ android {
         }
     }
     buildTypes.forEach { buildType ->
-        buildType.buildConfigField("String", "API_BASE_URL", "\"https://min-api.cryptocompare.com/\"")
+        buildType.buildConfigField(
+            "String",
+            "API_BASE_URL",
+            "\"https://min-api.cryptocompare.com/\""
+        )
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

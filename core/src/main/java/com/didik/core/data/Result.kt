@@ -11,7 +11,3 @@ sealed class Result<out T> {
         }
     }
 }
-
-fun <T> Result<T>.successOr(fallback: T): T {
-    return (this as? Result.Success<T>)?.data ?: fallback
-}

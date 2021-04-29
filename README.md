@@ -16,6 +16,7 @@ A small clone application from [Stockbit Apps](https://stockbit.com) which has a
 - Single Activity Architecture (using Jetpack Navigation Component).
 - Modularization of Android Application.
 - MVVM and Clean Architecture.
+- View Binding.
 - Material Design.
 - Paging3.
 - Koin.

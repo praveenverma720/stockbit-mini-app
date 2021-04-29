@@ -13,4 +13,5 @@ interface StockServices {
         @Query("limit") limit: Int,
         @Query("tsym") tsym: String = "USD"
     ): Response<CryptoResponse>
+
 }

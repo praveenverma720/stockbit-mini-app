@@ -12,4 +12,5 @@ class StockRemoteDataSource constructor(private val stockServices: StockServices
     ): Response<CryptoResponse> {
         return stockServices.getTopCrypto(page, limit)
     }
+
 }

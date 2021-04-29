@@ -148,7 +148,7 @@
             android:layout_width="@dimen/size_160dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            app:srcCompat="@drawable/illustration_error_connection" />
+            app:srcCompat="@drawable/img_error_connection" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/tapRetryButton"

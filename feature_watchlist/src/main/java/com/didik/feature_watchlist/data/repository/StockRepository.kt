@@ -22,4 +22,5 @@ class StockRepository constructor(
             Result.Failure(Throwable(response.message()))
         }
     }
+
 }

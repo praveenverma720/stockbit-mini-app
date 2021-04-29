@@ -48,13 +48,17 @@ class WatchlistFragment : BindingFragment<FragmentWatchlistBinding>() {
     }
 
     private fun renderWatchlistView() {
-        binding.stockRecyclerView.isVisible = true
-        binding.errorConnectionView.isVisible = false
+        with(binding) {
+            stockRecyclerView.isVisible = true
+            errorConnectionView.isVisible = false
+        }
     }
 
     private fun renderErrorConnectionView() {
-        binding.errorConnectionView.isVisible = true
-        binding.stockRecyclerView.isVisible = false
+        with(binding) {
+            errorConnectionView.isVisible = true
+            stockRecyclerView.isVisible = false
+        }
     }
 
     private fun initStockRecyclerView() {

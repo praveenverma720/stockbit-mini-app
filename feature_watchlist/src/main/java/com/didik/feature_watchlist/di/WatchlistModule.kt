@@ -48,4 +48,5 @@ object WatchlistModule {
         single { provideStockUseCase(get(), get()) }
         viewModel { WatchlistViewModel(get()) }
     }
+
 }

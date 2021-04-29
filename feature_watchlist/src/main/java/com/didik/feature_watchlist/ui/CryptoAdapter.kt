@@ -1,15 +1,17 @@
 package com.didik.feature_watchlist.ui
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.didik.feature_watchlist.R
 import com.didik.feature_watchlist.databinding.ItemStockBinding
 import com.didik.feature_watchlist.domain.model.CryptoModel
 
-class CryptoAdapter : PagingDataAdapter<CryptoModel, CryptoAdapter.CryptoViewHolder>(CryptoDiffUtil) {
+class CryptoAdapter
+    : PagingDataAdapter<CryptoModel, CryptoAdapter.CryptoViewHolder>(CryptoDiffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CryptoViewHolder {
         val binding = ItemStockBinding.inflate(
@@ -38,11 +40,13 @@ class CryptoAdapter : PagingDataAdapter<CryptoModel, CryptoAdapter.CryptoViewHol
                 percentageChangeTextView.text = crypto.changePercentageDay.toString()
 
                 val textColor = when {
-                    crypto.changePercentageDay < 0 -> Color.parseColor("#ee4a49")
-                    crypto.changePercentageDay > 0 -> Color.parseColor("#00ab6b")
-                    else -> Color.parseColor("#b5b5b5")
+                    crypto.changePercentageDay < 0 -> R.color.redCinnabar
+                    crypto.changePercentageDay > 0 -> R.color.greenJade
+                    else -> R.color.greyNobel
                 }
-                percentageChangeTextView.setTextColor(textColor)
+                percentageChangeTextView.setTextColor(
+                    ContextCompat.getColor(percentageChangeTextView.context, textColor)
+                )
             }
         }
     }

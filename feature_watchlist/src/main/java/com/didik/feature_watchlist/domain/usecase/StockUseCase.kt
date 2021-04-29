@@ -23,4 +23,5 @@ class StockUseCase constructor(
             Result.Failure(Throwable(exception.message))
         }
     }
+    
 }

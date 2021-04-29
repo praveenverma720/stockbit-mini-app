@@ -42,6 +42,5 @@ dependencies {
     implementation(Libs.kotlinStdlib)
     implementation(Libs.appCompat)
     implementation(Libs.material)
-    implementation(Libs.navigationUIKtx)
     implementation(Libs.navigationFragmentKtx)
 }

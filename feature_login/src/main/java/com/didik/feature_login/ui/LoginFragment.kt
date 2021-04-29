@@ -25,11 +25,11 @@ class LoginFragment : BindingFragment<FragmentLoginBinding>() {
 
     private fun setupIconClickListener() {
         binding.backIconImageView.setOnClickListener {
-            showToast(getString(R.string.label_back))
+            showToast(getString(R.string.text_back))
         }
 
         binding.chatIconImageView.setOnClickListener {
-            showToast(getString(R.string.label_chat))
+            showToast(getString(R.string.text_chat))
         }
     }
 
@@ -44,6 +44,18 @@ class LoginFragment : BindingFragment<FragmentLoginBinding>() {
 
         binding.loginButton.setOnClickListener {
             openWatchlist()
+        }
+
+        binding.loginWithFingerprintButton.setOnClickListener {
+            openWatchlist()
+        }
+
+        binding.forgetPasswordButton.setOnClickListener {
+            showToast(getString(R.string.text_forget_password))
+        }
+
+        binding.registerButton.setOnClickListener {
+            showToast(getString(R.string.text_account_register))
         }
     }
 

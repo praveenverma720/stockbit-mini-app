@@ -9,44 +9,43 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
+        style="@style/Body1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#333333"
+        android:textColor="@color/greyMineShaft"
         android:textSize="@dimen/text_size_16sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="BTC" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/fullNameTextView"
+        style="@style/Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#6b6b6b"
-        android:textSize="@dimen/text_size_12sp"
+        android:textColor="@color/greyDove"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nameTextView"
         tools:text="Bitcoin" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/priceTextView"
+        style="@style/Body2.Bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#333333"
-        android:textSize="@dimen/text_size_14sp"
-        android:textStyle="bold"
+        android:textColor="@color/greyMineShaft"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="11,770" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/percentageChangeTextView"
+        style="@style/Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size_12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/priceTextView"
         tools:text="+792.51"
-        tools:textColor="#00ab6b" />
+        tools:textColor="@color/greenJade" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

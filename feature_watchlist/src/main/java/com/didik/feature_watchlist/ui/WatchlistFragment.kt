@@ -37,16 +37,24 @@ class WatchlistFragment : BindingFragment<FragmentWatchlistBinding>() {
         cryptoAdapter = CryptoAdapter()
         cryptoAdapter.addLoadStateListener { state ->
             binding.progressBar.isVisible = (state.append == LoadState.Loading)
-            binding.swipeRefreshLayout.isRefreshing = state.refresh == LoadState.Loading
+            binding.swipeRefreshLayout.isRefreshing = (state.refresh == LoadState.Loading)
 
             if (state.refresh is LoadState.NotLoading) {
-                binding.stockRecyclerView.isVisible = true
-                binding.errorConnectionView.isVisible = false
+                renderWatchlistView()
             } else if (state.refresh is LoadState.Error) {
-                binding.errorConnectionView.isVisible = true
-                binding.stockRecyclerView.isVisible = false
+                renderErrorConnectionView()
             }
         }
+    }
+
+    private fun renderWatchlistView() {
+        binding.stockRecyclerView.isVisible = true
+        binding.errorConnectionView.isVisible = false
+    }
+
+    private fun renderErrorConnectionView() {
+        binding.errorConnectionView.isVisible = true
+        binding.stockRecyclerView.isVisible = false
     }
 
     private fun initStockRecyclerView() {
@@ -79,19 +87,19 @@ class WatchlistFragment : BindingFragment<FragmentWatchlistBinding>() {
 
     private fun setupViewClickListener() {
         binding.drawerIconImageView.setOnClickListener {
-            showToast(getString(R.string.label_open_drawer))
+            showToast(getString(R.string.text_open_drawer))
         }
 
         binding.notificationIconImageView.setOnClickListener {
-            showToast(getString(R.string.label_open_notification))
+            showToast(getString(R.string.text_open_notification))
         }
 
         binding.watchlistButton.setOnClickListener {
-            showToast(getString(R.string.label_all_watchlist))
+            showToast(getString(R.string.button_all_watchlist))
         }
 
         binding.addSymbolButton.setOnClickListener {
-            showToast(getString(R.string.label_add_symbol))
+            showToast(getString(R.string.button_add_symbol))
         }
 
         binding.tapRetryButton.setOnClickListener {

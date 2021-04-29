@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Heading6" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="lineHeight">@dimen/line_height_27dp</item>
+    </style>
+
+    <style name="Body1" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+        <item name="lineHeight">@dimen/line_height_24dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Body2" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+        <item name="lineHeight">@dimen/line_height_21dp</item>
+    </style>
+
+    <style name="Body2.Bold" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="lineHeight">@dimen/line_height_21dp</item>
+    </style>
+
+    <style name="Button" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="lineHeight">@dimen/line_height_21dp</item>
+    </style>
+
+    <style name="Caption" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+        <item name="lineHeight">@dimen/line_height_18dp</item>
+    </style>
+
+</resources>

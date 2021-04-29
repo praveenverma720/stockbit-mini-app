@@ -42,6 +42,7 @@ android {
 dependencies {
     implementation(Libs.kotlinStdlib)
     implementation(Libs.appCompat)
+    implementation(Libs.material)
     implementation(Libs.lifecycleViewModel)
     implementation(Libs.moshi)
     implementation(Libs.moshiConverter)

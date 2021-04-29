@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="InputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="InputEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColorHint">@color/greyNobel</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+        <item name="lineHeight">@dimen/line_height_24dp</item>
+    </style>
+
+</resources>

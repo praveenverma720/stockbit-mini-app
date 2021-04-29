@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     android:focusableInTouchMode="true"
     tools:context=".ui.WatchlistFragment">
 
@@ -21,8 +21,8 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/logoImageView"
         android:layout_width="wrap_content"
-        android:layout_height="28dp"
-        android:layout_marginTop="12dp"
+        android:layout_height="@dimen/size_28dp"
+        android:layout_marginTop="@dimen/size_12dp"
         android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,14 +41,13 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/watchlistTextView"
+        style="@style/Heading6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/size_16dp"
         android:layout_marginTop="@dimen/size_16dp"
-        android:text="@string/label_all_watchlist"
-        android:textColor="#333333"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:text="@string/button_all_watchlist"
+        android:textColor="@color/greyMineShaft"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logoImageView" />
 
@@ -65,7 +64,7 @@
         android:id="@+id/watchlistButton"
         android:layout_width="@dimen/size_0dp"
         android:layout_height="@dimen/size_0dp"
-        android:background="@android:color/transparent"
+        android:background="@color/transparent"
         app:layout_constraintBottom_toBottomOf="@id/watchlistTextView"
         app:layout_constraintEnd_toEndOf="@id/dropDownIconImageView"
         app:layout_constraintStart_toStartOf="@id/watchlistTextView"
@@ -75,7 +74,7 @@
         android:id="@+id/addIconImageView"
         android:layout_width="@dimen/size_16dp"
         android:layout_height="@dimen/size_16dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="@dimen/size_4dp"
         app:layout_constraintBottom_toBottomOf="@id/addSymbolTextView"
         app:layout_constraintEnd_toStartOf="@id/addSymbolTextView"
         app:layout_constraintTop_toTopOf="@id/addSymbolTextView"
@@ -83,21 +82,21 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/addSymbolTextView"
+        style="@style/Body2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/size_16dp"
         android:layout_marginEnd="@dimen/size_16dp"
-        android:text="@string/label_add_symbol"
-        android:textColor="#B3B6B3"
-        android:textSize="14sp"
+        android:text="@string/button_add_symbol"
+        android:textColor="@color/greyNobel"
+        app:layout_constraintBottom_toBottomOf="@id/watchlistTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logoImageView" />
+        app:layout_constraintTop_toTopOf="@id/watchlistTextView" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addSymbolButton"
         android:layout_width="@dimen/size_0dp"
         android:layout_height="@dimen/size_0dp"
-        android:background="@android:color/transparent"
+        android:background="@color/transparent"
         app:layout_constraintBottom_toBottomOf="@id/addSymbolTextView"
         app:layout_constraintEnd_toEndOf="@id/addSymbolTextView"
         app:layout_constraintStart_toStartOf="@id/addIconImageView"
@@ -106,12 +105,12 @@
     <View
         android:id="@+id/appBarLineView"
         android:layout_width="@dimen/size_0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="12dp"
-        android:background="#E3E3E3"
+        android:layout_height="@dimen/size_1dp"
+        android:layout_marginTop="@dimen/size_12dp"
+        android:background="@color/whiteMercury"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/watchlistTextView" />
+        app:layout_constraintTop_toBottomOf="@id/addSymbolButton" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
@@ -137,7 +136,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingBottom="8dp"
+        android:paddingBottom="@dimen/size_12dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -146,23 +145,23 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/errorConnectionImageView"
-            android:layout_width="160dp"
+            android:layout_width="@dimen/size_160dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             app:srcCompat="@drawable/illustration_error_connection" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/tapRetryButton"
-            android:layout_width="120dp"
+            style="@style/Button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_16dp"
-            android:background="@drawable/bg_rounded_button_green"
-            android:gravity="center"
-            android:text="@string/label_tap_to_retry"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="@dimen/text_size_14sp"
-            android:textStyle="bold" />
+            android:backgroundTint="@color/greenJade"
+            android:paddingHorizontal="@dimen/size_20dp"
+            android:paddingVertical="@dimen/size_8dp"
+            android:text="@string/button_tap_to_retry"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/size_24dp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

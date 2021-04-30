@@ -25,7 +25,7 @@ A small clone application from [Stockbit Apps](https://stockbit.com) which has a
 - Kotlin DSL for Gradle.
 
 ## Unit Testing
-Because by default to run unit testing using Android JUnit, to be able to run unit testing using Kotest you need to install the Kotest plugin first in Android Studio.
+Android Studio by default to run unit testing using Android JUnit, to be able to run unit testing using Kotest you need to install the Kotest plugin first in Android Studio.
 
 [Kotest Plugin](https://plugins.jetbrains.com/plugin/14080-kotest)
 
